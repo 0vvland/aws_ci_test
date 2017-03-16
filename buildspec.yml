@@ -4,7 +4,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - zip -r web_app.zip ./app/* ./doc/* ./admin/*; cd login; zip -r ../web_app.zip ./*; cd ..
+      - zip -r web_app.zip ./app/* ./doc/* ./admin/* && cd login && zip -r ../web_app.zip ./* && cd ..
   post_build:
     commands:
       - echo Build completed on `date`
